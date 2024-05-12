@@ -13,7 +13,6 @@
     }
     .baner {
         margin-top: 10px;
-        margin-left: 20px;
         display: flex;
         width: 100%;
         justify-content: start;
@@ -90,6 +89,7 @@
     color: white;
     text-align: center;
     transition: 0.5s;
+    font-size: larger;
     -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
     -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
     box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
@@ -101,9 +101,9 @@
     -ms-transform:  skew(-9deg, -9deg);
     -o-transform:  skew(-9deg, -9deg);
     transform:  skew(-9deg, -9deg);
-    -webkit-box-shadow: 8px 19px 46px 22px rgba(66, 68, 90, 1);
--moz-box-shadow: 8px 19px 46px 22px rgba(66, 68, 90, 1);
-box-shadow: 8px 19px 46px 22px rgba(66, 68, 90, 1);
+    -webkit-box-shadow: 8px 8px 0px 5px rgba(26, 27, 33, 1);
+-moz-box-shadow: 8px 8px 0px 5px rgba(26, 27, 33, 1);
+box-shadow: 8px 8px 0px 5px rgba(26, 27, 33, 1);
 }
 @keyframes shake {
   0% { transform: translate(3px, 3px) rotate(0deg); }
@@ -141,9 +141,29 @@ a {
         text-align: center;
         width: 100%;
     }
-    
+    .checkpoint-button {
+        border: 1px solid white;
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+            padding: 6px;
+            background-color: rgb(24, 24, 31);
+            outline: none;
+            transition: 0.5s;
+    }
+    .checkpoint-button:hover {
+        color: purple;
+    }
 </style>
-
+    <script>
+          function scrollToCheckpoint() {
+    var checkpointElement = document.getElementById('checkpoint');
+    var checkpointPosition = checkpointElement.offsetTop;
+    window.scrollTo({
+      top: checkpointPosition,
+      behavior: 'smooth' 
+    });
+  }
 </script>
 <body>
     <div class="baner">
@@ -193,9 +213,12 @@ a {
     <div class="welcome-text">
         <b>Znajdziesz tutaj informacje o mnie!</b>
         <br><br>
+            <input class="checkpoint-button " type="submit" value="Kliknij aby zobaczyc wiecej!" onclick="scrollToCheckpoint()"></div>
+        <br>
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0zUMcTqmCawcMfCtp6cIcK?utm_source=generator&theme=0" width="30%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
 </div>
+<div id="checkpoint">
 <div class="info">
     <h1 style="text-align: center; padding-top: 20px; font-size: 200%; color: white; letter-spacing: 5px;">Cos mnie</h1>
     <div class="about"> 
@@ -213,11 +236,23 @@ a {
     <br>
     <hr>
     <div class="media">
-    <h1 style="text-align: center; color: white;">Social Media</h1>
-    <a href="https://github.com/Abrissyy">Github</a>
-    <a href="https://doxbin.org/user/Abrissy">Doxbin</a>
-
+    <h1 style="text-align: center; color: white;">Ulubione utwory</h1>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0zUMcTqmCawcMfCtp6cIcK?utm_source=generator&theme=0" width="30%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/36YX0DeDD9JFYQz6RQT3Jk?utm_source=generator" width="30%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5vHLwhxxlGzmClMcxRRFPr?utm_source=generator" width="30%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 </div>
 </div>
+</div>
+<div style="text-align: center; color: white;">
+<h1 style="text-align: center; color: white;">OSs</h1>
+<p style="color: white; text-align: center;">Jedynym systemem operacyjnym jakim sie posluguje jest</p>
+<img src="https://camo.githubusercontent.com/61149993317f532536018b318c5039628ba657606a95da609e88a1f26dce8224/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f417263684c696e75782d3030373844363f7374796c653d666f722d7468652d6261646765266c6f676f3d6b616c69266c6f676f436f6c6f723d7768697465">
+</div>
+<div style="text-align: center; color: white;">
+<h1 style="text-align: center; color: white;">IDEs</h1>
+<p style="color: white; text-align: center;">Do tworzenia moich projektow uzywam</p>
+<img src="https://camo.githubusercontent.com/7efe4924f4194c7bd18b8fed492e0dfb4172d317f23904aec55c396e4de04f2c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f56535f436f64652d3030373844343f7374796c653d666f722d7468652d6261646765266c6f676f3d76697375616c25323073747564696f253230636f6465266c6f676f436f6c6f723d7768697465">
+</div>
+<br>
 </body>
 </html>
